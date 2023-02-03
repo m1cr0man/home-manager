@@ -11,6 +11,7 @@ let
     "google-chrome-dev"
     "brave"
     "vivaldi"
+    "opera"
   ];
 
   browserModule = defaultPkg: name: visible:
@@ -152,6 +153,7 @@ let
         google-chrome-beta = "Google/Chrome Beta";
         google-chrome-dev = "Google/Chrome Dev";
         brave = "BraveSoftware/Brave-Browser";
+        opera = "com.operasoftware.Opera";
       };
 
       linuxDirs = { brave = "BraveSoftware/Brave-Browser"; };
@@ -211,6 +213,7 @@ in {
       browserModule pkgs.google-chrome-dev "Google Chrome Dev" false;
     brave = browserModule pkgs.brave "Brave Browser" false;
     vivaldi = browserModule pkgs.vivaldi "Vivaldi Browser" false;
+    opera = browserModule pkgs.opera "Opera Browser" false;
   };
 
   config = mkMerge
