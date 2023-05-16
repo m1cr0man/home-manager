@@ -12,6 +12,9 @@ let
     "brave"
     "vivaldi"
     "opera"
+    "microsoft-edge"
+    "microsoft-edge-beta"
+    "microsoft-edge-dev"
   ];
 
   browserModule = defaultPkg: name: visible:
@@ -214,6 +217,12 @@ in {
     brave = browserModule pkgs.brave "Brave Browser" false;
     vivaldi = browserModule pkgs.vivaldi "Vivaldi Browser" false;
     opera = browserModule pkgs.opera "Opera Browser" false;
+    microsoft-edge =
+      browserModule pkgs.microsoft-edge "Microsoft Edge" false;
+    microsoft-edge-beta =
+      browserModule pkgs.microsoft-edge-beta "Microsoft Edge Beta" false;
+    microsoft-edge-dev =
+      browserModule pkgs.microsoft-edge-dev "Microsoft Edge Dev" false;
   };
 
   config = mkMerge
